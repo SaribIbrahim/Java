@@ -30,6 +30,6 @@ class ReverseArray {
             right--;
         }
         System.out.print("Reversed Array is: "+Arrays.toString(arr));
-
+        sc.close();
     }
 }
