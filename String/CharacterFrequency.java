@@ -7,12 +7,13 @@ public class CharacterFrequency {
         System.out.println("Enter a string to check character frequency: ");
         String str = sc.nextLine().toLowerCase();
 
-        int[] freq = new int[26];// array to store frequency of a-z
+        int[] freq = new int[26]; // array to store frequency of a-z
 
         for (int i = 0; i < str.length(); i++) { // only alphabets
-            char ch = str.charAt(i);// ch = 'c'
-            freq[ch - 'a']++; // increments freq[2] by 1, 'a' here means ascii value
-
+            char ch = str.charAt(i); // ch = 'c'
+            if (ch >= 'a' && ch <= 'z') { // only count alphabets
+                freq[ch - 'a']++; // increments freq[2] by 1, 'a' is ascii value of a=97
+            } 
         }
 
         // display frequency
