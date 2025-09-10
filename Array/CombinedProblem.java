@@ -75,7 +75,7 @@ public class CombinedProblem {
         System.out.println("Second largest number is: " + secondLargest);
 
         // palindrome
-        int start = arr[0];
+        int start = 0;
         int end = arr.length - 1;
         boolean isPalindrome = true;
         while (start < end) {
@@ -95,7 +95,7 @@ public class CombinedProblem {
         // factorial
         System.out.println("Enter a number to find factorial: ");
         int n = sc.nextInt();
-        int fact = 1;
+        long fact = 1;
         for (int i = 1; i <= n; i++) {
             fact = fact * i;
         }
@@ -103,12 +103,19 @@ public class CombinedProblem {
         sc.close();
 
         //array sorted in ascending order
+        boolean isSorted=true;
         for(int i=1;i<arr.length;i++){
             if(arr[i]<arr[i-1]){
-                System.out.println("Array is not sorted in ascending order");
+                isSorted=false;
                 break;
             }
         }
-        System.out.println("Array is sorted in ascending order");
+        if(isSorted){
+            System.out.println("Array is sorted in ascending order");
+        }
+        else{
+            System.out.println("Array is not sorted in ascending order");
+        }
+        
     }
 }
