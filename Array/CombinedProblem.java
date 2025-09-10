@@ -1,8 +1,20 @@
 import java.util.Arrays;
+import java.util.Scanner;
 public class CombinedProblem {
     public static void main(String[] args){
-        int[] arr={3, 0, 5, 0, 2, 2, 5};
+        
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter how many elements you want in array: ");
+        int num=sc.nextInt();
+        int[] arr=new int[num];
+
+        System.out.println("Enter elements for array");
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
         System.out.println("Array is: "+Arrays.toString(arr));
+        
         //zereos at end
         int index=0;
         for(int i=0;i<arr.length;i++){
@@ -61,14 +73,26 @@ public class CombinedProblem {
             }
         }
         System.out.println("Second largest number is: " + secondLargest);
+
+        //palindrome
+        int start=arr[0];
+        int end=arr.length-1;
+        while(start<end){
+            if(arr[start]!=arr[end]){
+                System.out.println("Array is not a palindrome");
+                break;
+            }
+            System.out.println("Array is a palindrome");
+        }
        
         //factorial
+        System.out.println("Enter a number to find factorial: ");
+        int n=sc.nextInt();
         int fact=1;
-        int n=5;
         for(int i=1;i<=n;i++){
             fact=fact*i;
         }
         System.out.println("Factorial of " + n + " is " + fact);
-
+        sc.close();
     }
 }
