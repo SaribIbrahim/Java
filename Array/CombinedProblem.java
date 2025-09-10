@@ -101,5 +101,14 @@ public class CombinedProblem {
         }
         System.out.println("Factorial of " + n + " is " + fact);
         sc.close();
+
+        //array sorted in ascending order
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]<arr[i-1]){
+                System.out.println("Array is not sorted in ascending order");
+                break;
+            }
+        }
+        System.out.println("Array is sorted in ascending order");
     }
 }
