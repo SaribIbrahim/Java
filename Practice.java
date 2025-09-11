@@ -87,6 +87,15 @@ public class Practice {
             System.out.println("Array "+Arrays.toString(arr)+" is not sorted in ascending order");
         }
 
+        //factorial
+        System.out.println("Enter a number to find factorial: ");
+        int num=sc.nextInt();
+        int fact=1;
+        for(int i=1;i<=num;i++){
+            fact=fact*i;
+        }
+        System.out.println("Factorial of "+num+" is: "+fact);
+
         sc.close();
     }
 }
