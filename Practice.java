@@ -27,6 +27,19 @@ public class Practice {
         }
         System.out.println("Array with 0's at end is: " + Arrays.toString(arr));
 
+        //reverse array
+        int left=0;
+        int right=arr.length-1;
+        int temp;
+        while(left<right){
+            temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }
+        System.out.println("Array after reversal is: "+Arrays.toString(arr));
+
         
         sc.close();
     }
