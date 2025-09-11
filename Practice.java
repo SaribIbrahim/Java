@@ -40,6 +40,15 @@ public class Practice {
         }
         System.out.println("Array after reversal is: "+Arrays.toString(arr));
 
+        //min
+        int min=arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+        System.out.println("Minimum number is: "+min);
+
         
         sc.close();
     }
