@@ -72,6 +72,21 @@ public class Practice {
         }
         System.out.println("Second largest number is: "+secondLargest);
 
+        // array sort ascending
+        boolean isSorted=true;
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]<arr[i-1]){
+                isSorted=false;
+                break;
+            }
+        }
+        if(isSorted){
+            System.out.println("Array "+Arrays.toString(arr)+" is sorted in ascending order");
+        }
+        else{
+            System.out.println("Array "+Arrays.toString(arr)+" is not sorted in ascending order");
+        }
+
         sc.close();
     }
 }
