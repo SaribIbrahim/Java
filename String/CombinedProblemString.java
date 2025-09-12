@@ -4,7 +4,7 @@ public class CombinedProblemString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string: ");
-        String str = sc.nextLine();
+        String str = sc.nextLine().toLowerCase();
         System.out.println("String is: " + str);
 
         // palindrome check
@@ -51,7 +51,15 @@ public class CombinedProblemString {
         System.out.println("Vowels in string "+str+" are: "+vowels);
         System.out.println("Consonants in string "+str+" are: "+consonants);
 
-
+        //remove duplicates
+        StringBuilder result=new StringBuilder();
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if(result.indexOf(String.valueOf(ch))==-1){
+                result.append(ch);
+            }
+        }
+        System.out.println("String after removing duplicates: "+result);
 
         sc.close();
     }
