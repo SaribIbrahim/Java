@@ -34,6 +34,24 @@ public class CombinedProblemString {
             }
         }
 
+        // consonants and vowels
+        int consonants=0;
+        int vowels=0;
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            if(ch>='a' && ch<='z'){
+                if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+                    vowels++;
+                }
+                else{
+                    consonants++;
+                }
+            }
+        }
+        System.out.println("Vowels in string "+str+" are: "+vowels);
+        System.out.println("Consonants in string "+str+" are: "+consonants);
+
+
 
         sc.close();
     }
